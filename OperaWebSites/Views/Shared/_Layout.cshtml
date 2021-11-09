@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="img-teatro">
+        </div>
+        <div class="login-conteiner">
+            <h2>LOGIN</h2>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">INICIO</a>
+            </li>
+            <li>
+                <a href="#">OPERA</a>
+            </li>
+            <li>
+                <a href="#">EMPLEADO</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <aside class="izq">
+            @if (IsSectionDefined("izq"))
+            {
+                @RenderSection("izq")
+            }
+            else
+            {
+                <h2>DIRECCION: C. Lucerna 64, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, México</h2>
+                <h2>TELEFONO: +52 55 5535 4178</h2>
+            }
+        </aside>
+        <div class="content">
+            @RenderBody()
+        </div>
+        <aside class="der">
+            @if (IsSectionDefined("der"))
+            {
+                @RenderSection("der")
+            }
+            else
+            {
+                <img src="~/Images/1782186_10151975479817849_286030772_n_movhnormal.jpg" />
+                <img src="~/Images/617x353xteatro-milan_3.jpg.pagespeed.ic.b--82EGMcr.jpg" />
+                <img src="~/Images/4746133.jpg"/>
+            }
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>email@sistemaopera.com</p>
+    </footer>
+</body>
+</html>

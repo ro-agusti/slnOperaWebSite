@@ -1,0 +1,45 @@
+﻿@model OperaWebSites.Models.Opera
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detail</title>
+</head>
+<body>
+    <fieldset>
+        <!-- para agrupar -->
+        <legend> Opera Detail</legend><!-- para Titulo -->
+        <div class="display-label">
+            <!-- para mostrar el nombre de la propiedad-->
+            @Html.DisplayNameFor(model => model.Title)
+        </div>
+        <div class="display-text">
+            <!-- para mostrar el valor-->
+            @Html.DisplayFor(model => model.Title)
+        </div>
+        <div class="display-label">
+            <!-- para mostrar el nombre de la propiedad-->
+            @Html.DisplayNameFor(model => model.Composer)
+        </div>
+        <div class="display-text">
+            <!-- para mostrar el valor-->
+            @Html.DisplayFor(model => model.Composer)
+        </div>
+        <div class="display-label">
+            <!-- para mostrar el nombre de la propiedad-->
+            @Html.DisplayNameFor(model => model.Year)
+        </div>
+        <div class="display-text">
+            <!-- para mostrar el valor-->
+            @Html.DisplayFor(model => model.Year)
+        </div>
+    </fieldset>
+    <p>
+        <!-- para volver al index-->
+        @Html.ActionLink("Back to List", "Index", "Opera")
+    </p>
+   
+</body>
+</html>

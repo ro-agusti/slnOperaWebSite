@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.title = "Index";
+}
+
+<h1>Bienvenido al sistema Web del Teatro Milan</h1>
+<h2>@ViewBag.Fecha</h2>
+<p class="link">@Html.ActionLink("ir a operas", "Index", "Opera")</p>
+
+@section der{
+    <img src="~/Images/TMilanAlta0008-600x400.jpg" />
+    <img src="~/Images/images-1.jpg" />
+    <img src="~/Images/teatro-la-scala-milan-1200x900.jpg" />
+}
+@section izq{
+    <p> Guillermo Barclay (Escenógrafo) y Manuel Montoro (Director de Escena) operaron por casi una década el Teatro Milán, creando su propia compañía de repertorio además de albergar diferentes producciones nacionales e internacionales multipremiadas. A consecuencia del terremoto de 1985 el teatro tuvo que cerrar !sus puertas.</p>
+    <p>En enero de 2011 Pablo Perroni y Mariana Garza compran el inmueble con la intención de reconstruirlo satisfaciendo todas las necesidades de técnicos, artistas, espectadores y productores; ofreciendo una alternativa funcional, hermosa y de creación artística. Con este objetivo claro, contratan a Sergio Villegas, uno de los escenógrafos más destacados actualmente en nuestro país.</p>
+    }

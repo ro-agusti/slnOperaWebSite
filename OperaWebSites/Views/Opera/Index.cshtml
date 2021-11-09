@@ -1,0 +1,53 @@
+﻿@model IEnumerable<OperaWebSites.Models.Opera>
+
+<!-- este control genera en el cliente una etiqueta "a"-->
+<p>@Html.ActionLink("Create New", "Create", "Opera")</p>
+<table>
+    <tr>
+        <!--para imprimir el nombre de la propiedad de opera-->
+        <th>@Html.DisplayNameFor(model => model.Title)</th>
+        <th>@Html.DisplayNameFor(model => model.Composer)</th>
+        <th>@Html.DisplayNameFor(model => model.Year)</th>
+        <th>Details</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="tabla">
+            <td>@Html.DisplayFor(modelItem => item.Title)</td>
+            <td>@Html.DisplayFor(modelItem => item.Composer)</td>
+            <td>@Html.DisplayFor(modelItem => item.Year)</td>
+            <td>
+                @Html.ActionLink("Detail", "Detail", new { id = item.OperaID })
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.OperaID })
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.OperaID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section der
+{
+    <img src="~/Images/compositores/Rectangule-Episodio-G-puccini-970-x-730-px-400x250.jpg" />
+    <img src="~/Images/compositores/mozart_340a.jpg" />
+    <img src="~/Images/compositores/mozart.jpg" />
+}
+@section izq{
+    <ul>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/La_finta_semplice">La finta semplice</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Bastien_und_Bastienne">Bastien und Bastienne</a>
+        </li>
+        <li>
+            <a href="https://es.wikipedia.org/wiki/Apollo_et_Hyacinthus">Apollo et Hyacinthus</a>
+        </li>
+    </ul>
+    }
